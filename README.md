@@ -4,10 +4,15 @@
 [![Licence](https://img.shields.io/badge/Licence-MIT-green?style=flat-square)](./LICENSE)
 [![Installer avec Tampermonkey](https://img.shields.io/badge/Tampermonkey-Installer-orange?style=flat-square&logo=greasemonkey)](https://greasyfork.org/fr/scripts/563123-kraland-forum-cartouche-compact)
 
-**Forum cartouche (compact)** est un userscript pour **Tampermonkey** (compatible **Violentmonkey**) visant à **compacter, stabiliser et fiabiliser** l’affichage des cartouches utilisateurs sur le **forum Kraland**.
+**Forum cartouche (compact)** est un userscript pour **Tampermonkey** (compatible **Violentmonkey**) visant à **compacter et compléter** l’affichage des cartouches utilisateurs sur les **forum de Kraland**.
 
-> 🎯 Objectif : une cartouche plus lisible, plus compacte, sans reflow ni éléments parasites.  
-> 🛠️ Technologies : JavaScript (DOM), CSS injecté, `MutationObserver` + throttling via `requestAnimationFrame`.
+> 🎯 Objectif :
+- Regrouper les informations utilisateur dans une **cartouche verticale cohérente**
+- Réduire la hauteur et le bruit visuel
+- Mettre en avant l’identité (avatar + nom), puis le contexte (drapeau, labels)
+- Afficher **la fonction complète sous forme de badge**, combinant **icône + intitulé**, au lieu d’une simple icône isolée
+
+👉 Résultat : une cartouche **plus lisible**, **plus compacte**, et **compréhensible immédiatement**, même sur des fils de discussion denses.
 
 ---
 
@@ -38,6 +43,10 @@
 ---
 
 ## 🚀 Installation
+
+| Avant | Après |
+|:-----:|:-----:|
+| ![](https://i.ibb.co/zWgKBW4W/image.png) | ![](https://i.ibb.co/bjN99rxq/image.png) |
 
 ### Installation recommandée (GreasyFork)
 1. Installe un gestionnaire de userscripts :
