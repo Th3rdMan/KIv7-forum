@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/badge/Version-2026.01.18.2-blueviolet?style=flat-square)](https://github.com/Th3rdMan/<REPO>)
 [![Licence](https://img.shields.io/badge/Licence-MIT-green?style=flat-square)](./LICENSE)
-[![Installer avec Tampermonkey](https://img.shields.io/badge/Tampermonkey-Installer-orange?style=flat-square&logo=greasemonkey)](https://github.com/Th3rdMan/<REPO>/raw/main/<FICHIER>.user.js)
+[![Installer avec Tampermonkey](https://img.shields.io/badge/Tampermonkey-Installer-orange?style=flat-square&logo=greasemonkey)](https://greasyfork.org/fr/scripts/563123-kraland-forum-cartouche-compact)
 
 **Forum cartouche (compact)** est un userscript pour **Tampermonkey** (compatible Violentmonkey), conçu pour compacter et stabiliser l’affichage des cartouches utilisateurs sur le **forum Kraland**.
 
