@@ -1,55 +1,50 @@
 ## 🧠 Kraland – Forum cartouche (compact)
 
-[![Version](https://img.shields.io/badge/Version-2026.01.18.2-blueviolet?style=flat-square)](https://github.com/Th3rdMan/KIv7-forum/KIv7-forum)
+[![Version](https://img.shields.io/badge/Version-2026.01.18.2-blueviolet?style=flat-square)](https://github.com/Th3rdMan/KIv7-forum)
 [![Licence](https://img.shields.io/badge/Licence-MIT-green?style=flat-square)](./LICENSE)
 [![Installer avec Tampermonkey](https://img.shields.io/badge/Tampermonkey-Installer-orange?style=flat-square&logo=greasemonkey)](https://greasyfork.org/fr/scripts/563123-kraland-forum-cartouche-compact)
 
-**Forum cartouche (compact)** est un userscript pour **Tampermonkey** (compatible Violentmonkey), conçu pour compacter et stabiliser l’affichage des cartouches utilisateurs sur le **forum Kraland**.
+**Forum cartouche (compact)** est un userscript pour **Tampermonkey** (compatible **Violentmonkey**) visant à **compacter, stabiliser et fiabiliser** l’affichage des cartouches utilisateurs sur le **forum Kraland**.
 
-> 🎯 Objectif : une cartouche plus lisible, plus compacte, sans “reflow” ni éléments parasites.  
-> 🛠️ Technologies : JavaScript (DOM), CSS injecté, MutationObserver + throttling (rAF).
+> 🎯 Objectif : une cartouche plus lisible, plus compacte, sans reflow ni éléments parasites.  
+> 🛠️ Technologies : JavaScript (DOM), CSS injecté, `MutationObserver` + throttling via `requestAnimationFrame`.
 
 ---
 
-## ✨ Fonctionnalités principales
+## ✨ Fonctionnalités
 
-- 🧍 **Cartouche compactée et centrée**
-  - Structure en colonne (avatar → nom → drapeau → labels → badge)
-  - Espacements maîtrisés, rendu stable
-- 🖼️ **Avatar repositionné**
-  - Récupération de l’avatar depuis `.user-info`
-  - Placement dans un conteneur dédié (`.tm-avatar`)
-- 🏳️ **Drapeau conservé et isolé**
-  - Détection par URL (`/world/logo`)
-  - Placement dans `.tm-flag` + léger drop-shadow
+- 🧍 **Cartouche compacte et centrée**
+  - Organisation verticale : avatar → nom → drapeau → labels → badge
+  - Espacements constants, rendu stable
+- 🖼️ **Avatar normalisé**
+  - Extraction depuis `.user-info`
+  - Repositionnement dans un conteneur dédié (`.tm-avatar`)
+- 🏳️ **Drapeau isolé**
+  - Détection fiable via l’URL (`/world/logo`)
+  - Placement dédié (`.tm-flag`) avec ombrage léger
 - 🏷️ **Labels regroupés**
-  - Wrap automatique dans `.tm-labels`
-  - Capitalisation propre du texte des labels
-- 🪪 **Badge rôle (icône + texte)**
-  - Extraction du grade via tooltip (title / data-original-title)
-  - Affichage dans un badge pill (`.tm-badge`) avec l’icône correspondante
-  - Suppression de l’icône source pour éviter le doublon
-- ⚡ **Stabilité & perf**
-  - `MutationObserver` pour suivre les updates du forum
-  - Throttling via `requestAnimationFrame` (1 passe max / frame)
-  - Signature (`dataset.tmSig`) pour éviter les re-traitements inutiles
-  - Déconnexion/reconnexion contrôlée de l’observer pendant le traitement (anti-boucle)
+  - Centralisation dans `.tm-labels`
+  - Capitalisation automatique du texte
+- 🪪 **Badge de rôle (icône + texte)**
+  - Extraction du grade via tooltip (`title` / `data-original-title`)
+  - Affichage dans un badge compact (`.tm-badge`)
+  - Suppression de l’icône source pour éviter tout doublon
+- ⚡ **Stabilité & performances**
+  - Observation fine des mutations DOM
+  - Limitation à une passe par frame (`requestAnimationFrame`)
+  - Signature interne (`dataset.tmSig`) pour éviter les re-traitements inutiles
+  - Déconnexion temporaire de l’observer pendant le rendu (anti-boucle)
 
 ---
 
 ## 🚀 Installation
 
-### Option A — Installation “one-click” (GitHub raw)
+### Installation recommandée (GreasyFork)
 1. Installe un gestionnaire de userscripts :
    - [Tampermonkey](https://www.tampermonkey.net/)
    - [Violentmonkey](https://violentmonkey.github.io/)
 2. Clique sur :
-   - 👉 **[Installer le script](https://github.com/Th3rdMan/<REPO>/raw/main/<FICHIER>.user.js)**
-
-### Option B — Installation manuelle
-1. Crée un nouveau script dans Tampermonkey
-2. Copie/colle le contenu du fichier `.user.js`
-3. Sauvegarde
+   - 👉 **https://greasyfork.org/fr/scripts/563123-kraland-forum-cartouche-compact**
 
 ---
 
@@ -63,4 +58,4 @@
 
 ## 📜 Licence
 
-Sous licence **MIT** (voir `LICENSE`).
+Ce projet est distribué sous licence **MIT** (voir le fichier `LICENSE`).
