@@ -1,6 +1,6 @@
 ## 🧠 Kraland – Forum cartouche (compact)
 
-[![Version](https://img.shields.io/badge/Version-2026.01.18.3-blueviolet?style=flat-square)](https://github.com/Th3rdMan/KIv7-forum)
+[![Version](https://img.shields.io/badge/Version-2026.01.18.2-blueviolet?style=flat-square)](https://github.com/Th3rdMan/KIv7-forum)
 [![Licence](https://img.shields.io/badge/Licence-MIT-green?style=flat-square)](./LICENSE)
 [![Installer avec Tampermonkey](https://img.shields.io/badge/Tampermonkey-Installer-orange?style=flat-square&logo=greasemonkey)](https://greasyfork.org/fr/scripts/563123-kraland-forum-cartouche-compact)
 
